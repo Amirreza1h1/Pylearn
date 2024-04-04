@@ -1,5 +1,5 @@
 # Py-learn-assignment-13
-تمرین جلسه دهم
+تمرین جلسه سیزدهم
 ## Python
 
 ### Session 13
