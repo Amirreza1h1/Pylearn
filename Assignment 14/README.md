@@ -1,16 +1,16 @@
-# Py-learn-assignment-13
-تمرین جلسه دهم
+# Py-learn-assignment-14
+تمرین جلسه چهاردهم
 ## Python
 
-### Session 13
-<p>Start knowing arcade library.</p>
-<p>Start creating a Spaceship game</p>
+### Session 14
+<p>Completing Spaceship Game</p>
 ```
 pip install arcade
 ```
 
 ---
 ## Spaceship Game
+
 #### Run
 
 <p>it just needs to run main.py</p>
@@ -20,7 +20,7 @@ pip install arcade
 python main.py
 ```
 
-![Screen Shoot](screenshot_game.jpg)
+![Screen Shoot](game_environment.jpg)
 
 
 #### spaceship.py
@@ -30,18 +30,15 @@ python main.py
 #### enemy.py
 
 <p>in this file like the file spaceship.py, we have the size, speed and where from its appear in the game window.</p>
+<p>after each enemy spaceship is created the speed of itself will be faster.</p>
 
 #### game.py
 
 <p>in this file, we have the basis of the game like background, planes, window size and etc
 which is run in the on_draw method.</p>
-<p>the method on_key_press, it handles the moving of our plane with common keys(w,a,s,d) for up, right, down and left moving.</p>
-<p>the method on_update, update the things that are dynamic in the window and commit their changes like the moving of the enemy ship.</p>
+<p>the method on_key_press, it handles the moving of our plane with common keys(a,d) for left and right moving.</p>
+<p>the method on_update, update the things that are dynamic in the window and commit their changes like the moving and speed of the enemy ship, our bullets, life and score of us.</p>
 
----
-## complex_loops
-### use different method
-```
-arcade.draw_rectangle_filled()
-```
-![Screen Shoot](Screenshot.png)
+##### game over
+
+![Screen Shoot](game_over.jpg)

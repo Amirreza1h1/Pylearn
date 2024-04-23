@@ -111,4 +111,4 @@ class Game(arcade.Window):
             ink=self.emy.enemy_speed()
             self.enemies.append(self.emy)
             self.last_enemy_spawn_time = current_time
-            print(self.emy.speed)
+            # print(self.emy.speed)
