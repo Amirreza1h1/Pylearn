@@ -39,6 +39,8 @@ which is run in the on_draw method.</p>
 <p>the method on_key_press, it handles the moving of our plane with common keys(a,d) for left and right moving.</p>
 <p>the method on_update, update the things that are dynamic in the window and commit their changes like the moving and speed of the enemy ship, our bullets, life and score of us.</p>
 
+![gif](game.gif)
+
 ##### game over
 
 ![Screen Shoot](game_over.jpg)
