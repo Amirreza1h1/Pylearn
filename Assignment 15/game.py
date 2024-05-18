@@ -9,14 +9,20 @@ class Game(arcade.Window):
         arcade.set_background_color(arcade.color.KHAKI)
 
         self.snake = snake.Snake(self)
-        self.food = food.Apple(self)
+        self.food_1 = food.Apple(self)
+        self.food_2 = food.Banana(self)
+        self.food_3=food.Poo(self)
+
 
     def on_draw(self):
         arcade.start_render()
         self.snake.draw()
         arcade.draw_text("score: "+f"{self.snake.score}", self.width-50, self.height//50, arcade.color.BLACK, font_size=12, anchor_x="center")
 
-        self.food.draw()
+        self.food_1.draw()
+        self.food_2.draw()
+        self.food_3.draw()
+
         arcade.finish_render()
 
     def on_key_release(self, symbol: int, modifiers: int):
@@ -36,6 +42,15 @@ class Game(arcade.Window):
     def on_update(self, delta_time: float):
         self.snake.move()
 
-        if arcade.check_for_collision(self.snake, self.food):
-            self.snake.eat(self.food)
-            self.food = food.Apple(self)
+        if arcade.check_for_collision(self.snake, self.food_1):
+            self.snake.eat(self.food_1)
+            self.food_1 = food.Apple(self)
+
+        if arcade.check_for_collision(self.snake, self.food_2):
+            self.snake.eat(self.food_2)
+            self.food_2 = food.Banana(self)
+
+        
+        if arcade.check_for_collision(self.snake, self.food_3):
+            self.snake.eat(self.food_3)
+            self.food_3 = food.Poo(self)
