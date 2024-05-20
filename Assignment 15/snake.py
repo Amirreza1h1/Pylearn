@@ -12,7 +12,7 @@ class Snake(arcade.Sprite):
         self.change_x = 0
         self.change_y = 0
         self.speed = 4
-        self.score = 0
+        self.score = 1
         self.body = []
 
     def draw(self):

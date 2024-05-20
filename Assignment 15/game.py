@@ -54,12 +54,15 @@ class Game(arcade.Window):
         if arcade.check_for_collision(self.snake, self.food_3):
             self.snake.eat(self.food_3)
             self.food_3 = food.Poo(self)
-
+        
+        #game over needs modify
         while 1:
             if arcade.check_for_collision(self.snake,self.snake):
                 print("game over!")
             if self.snake.center_x-32==0 or self.snake.center_x+32==500:
                 print("game over!")
             if self.snake.center_y-32==0 or self.snake.center_y+32==500:
+                print("game over!")
+            if self.snake.score==0:
                 print("game over!")
                 
