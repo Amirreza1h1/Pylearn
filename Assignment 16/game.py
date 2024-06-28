@@ -15,6 +15,9 @@ class Game(arcade.Window):
         self.Player_2 = raquette.Raquette(
             self.width-40, self.height//2, "Mamad", arcade.color.GREEN)
         self.ball = ball.Ball(self)
+        self.players = arcade.SpriteList()
+        self.players.append(self.Player_1)
+        self.players.append(self.Player_2)
 
     def on_draw(self):
         arcade.start_render()
@@ -33,5 +36,18 @@ class Game(arcade.Window):
 
     def on_update(self, delta_time: float):
         self.ball.move()
-        if self.ball.center_y<30 or self.ball.center_y>self.height-30:
-            self.ball.change_y*=-1
+        self.Player_2.move(self,self.ball)
+
+        if self.ball.center_y < 30 or self.ball.center_y > self.height-30:
+            self.ball.change_y *= -1
+        if arcade.check_for_collision_with_list(self.ball,self.players):
+            self.ball.change_x *= -1
+
+        if self.ball.center_x < 0:
+            self.Player_2.score += 1
+            del self.ball
+            self.ball = ball.Ball(self)
+        if self.ball.center_x > self.width:
+            self.Player_1.score += 1
+            del self.ball
+            self.ball = ball.Ball(self)

@@ -15,8 +15,18 @@ class Raquette(arcade.Sprite):
         self.speed = 4
         self.score = 0
 
-    def move(self):
-        ...
+    def move(self,game,ball):
+        if ball.center_x>game.width//2:
+
+            if ball.center_y>self.center_y:
+                self.change_y=1
+            if ball.center_y<self.center_y:
+                self.change_y=-1
+            self.center_y += self.change_y*self.speed
+            if self.center_y>game.height-self.height:
+                self.center_y=game.height-self.height
+            if self.center_y<self.height:
+                self.center_y=self.height
 
     def draw(self):
         arcade.draw_rectangle_filled(

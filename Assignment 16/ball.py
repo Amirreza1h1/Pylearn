@@ -5,9 +5,11 @@ import arcade
 class Ball(arcade.Sprite):
     def __init__(self, game):
         super().__init__()
+        self.radius = 15
+        self.width=self.radius*2
+        self.height=self.radius*2
         self.center_x = game.width//2
         self.center_y = game.height//2
-        self.radius = 15
         self.change_x = random.choice([-1, 1])
         self.change_y = random.choice([-1, 1])
         self.speed = 4
