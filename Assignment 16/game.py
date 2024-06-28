@@ -2,7 +2,7 @@ import arcade
 import raquette
 import ball
 
-WINDOW_SIZE_WIDTH = 1200
+WINDOW_SIZE_WIDTH = 1300
 WINDOW_SIZE_HEIGHT = 700
 
 
@@ -28,6 +28,13 @@ class Game(arcade.Window):
         self.Player_1.draw()
         self.Player_2.draw()
         self.ball.draw()
+
+        arcade.draw_text("score: "+f"{self.Player_1.score}", (self.width//2)-70,
+                         50, arcade.color.WHITE, font_size=18, anchor_x="center")
+
+        arcade.draw_text("score: "+f"{self.Player_2.score}", (self.width//2)+70,
+                         50, arcade.color.WHITE, font_size=18, anchor_x="center")
+
         arcade.finish_render()
 
     def on_mouse_motion(self, x: int, y: int, dx: int, dy: int):
@@ -36,11 +43,11 @@ class Game(arcade.Window):
 
     def on_update(self, delta_time: float):
         self.ball.move()
-        self.Player_2.move(self,self.ball)
+        self.Player_2.move(self, self.ball)
 
         if self.ball.center_y < 30 or self.ball.center_y > self.height-30:
             self.ball.change_y *= -1
-        if arcade.check_for_collision_with_list(self.ball,self.players):
+        if arcade.check_for_collision_with_list(self.ball, self.players):
             self.ball.change_x *= -1
 
         if self.ball.center_x < 0:
