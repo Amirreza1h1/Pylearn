@@ -10,12 +10,12 @@ class Ball(arcade.Sprite):
         self.radius = 15
         self.change_x = random.choice([-1, 1])
         self.change_y = random.choice([-1, 1])
-        self.speed = 3
+        self.speed = 4
         self.color = arcade.color.YELLOW
 
     def move(self):
-        self.change_x += self.change_x*self.speed
-        self.change_y += self.change_y*self.speed
+        self.center_x += self.change_x*self.speed
+        self.center_y += self.change_y*self.speed
 
     def draw(self):
         arcade.draw_circle_filled(
