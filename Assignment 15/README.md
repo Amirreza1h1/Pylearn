@@ -23,7 +23,7 @@ python main.py
 
 <p>game starts and the snake has score 1, the head of the snake is blue, when we reach to the foods, the body of the snake grow as one of the color red or green.</p>
 
-![gif](game.gif)
+![gif](gameplay.gif)
 
 ### apple,banana and poo
 
