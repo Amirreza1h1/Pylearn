@@ -12,7 +12,7 @@ class Ball(arcade.Sprite):
         self.center_y = game.height//2
         self.change_x = random.choice([-1, 1])
         self.change_y = random.choice([-1, 1])
-        self.speed = 5
+        self.speed = 4.75
         self.color = arcade.color.YELLOW
 
     def move(self):
