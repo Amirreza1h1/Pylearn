@@ -19,7 +19,9 @@ class Game(arcade.Window):
         self.heart_x = 50
         self.ball = ball.Ball(self)
         self.me = paddle.Paddle(self)
+        self.walls_list = []
 
+# arcade.SpriteList()
     def on_draw(self):
         arcade.start_render()
         arcade.draw_texture_rectangle(WINDOW_SIZE_WIDTH / 2, WINDOW_SIZE_HEIGHT / 2,
@@ -31,22 +33,20 @@ class Game(arcade.Window):
         coordinate_list_blue = [[25, 330], [80, 330], [135, 330], [190, 330], [245, 330], [300, 330], [355, 330], [410, 330], [465, 330], [520, 330], [575, 330]]
         coordinate_list_green = [[25, 360], [80, 360], [135, 360], [190, 360], [245, 360], [300, 360], [355, 360], [410, 360], [465, 360], [520, 360], [575, 360]]
 
-        self.walls_list = []
-
         for coordinate in coordinate_list_red:
-            wall = walls.Walls(arcade.color.RED, 1)  # تنظیم رنگ و امتیاز برای دیواره
+            wall = walls.Walls(arcade.color.RED, 1)
             wall.center_x = coordinate[0]
             wall.center_y = coordinate[1]
             self.walls_list.append(wall)
 
         for coordinate in coordinate_list_blue:
-            wall = walls.Walls(arcade.color.BLUE, 2)  # تنظیم رنگ و امتیاز برای دیواره
+            wall = walls.Walls(arcade.color.BLUE, 2)
             wall.center_x = coordinate[0]
             wall.center_y = coordinate[1]
             self.walls_list.append(wall)
 
         for coordinate in coordinate_list_green:
-            wall = walls.Walls(arcade.color.GREEN, 3)  # تنظیم رنگ و امتیاز برای دیواره
+            wall = walls.Walls(arcade.color.GREEN, 3)
             wall.center_x = coordinate[0]
             wall.center_y = coordinate[1]
             self.walls_list.append(wall)
@@ -93,3 +93,11 @@ class Game(arcade.Window):
             self.life -= 1
             del self.ball
             self.ball = ball.Ball(self)
+
+        for wall in self.walls_list:
+            if arcade.check_for_collision(self.ball,wall):
+                self.me.score+=wall.score
+                self.walls_list.remove(wall)
+                del wall
+                self.ball.change_y*=-1
+                break
