@@ -28,7 +28,7 @@ class Game(arcade.Window):
         self.ball.draw()
         for i in range(self.life):
                 arcade.draw_lrwh_rectangle_textured(
-                    (self.heart_x*i)+50, 10, 20, 20, self.heart_texture)
+                    (self.heart_x*i)+20, 10, 20, 20, self.heart_texture)
                 arcade.draw_text(str(self.me.score), self.width - 40, 10,
                              arcade.color.WHITE, font_size=20, anchor_x="center")
         arcade.finish_render()
@@ -43,7 +43,20 @@ class Game(arcade.Window):
         elif symbol == arcade.key.D:
             self.me.change_x = 1
 
+    def on_key_release(self, symbol: int, modifiers: int):
+        self.me.change_x = 0
 
-    # def on_update(self):
-    #     self.ball.move()
-    #     ...
+
+    def on_update(self, delta_time: float):
+        self.ball.move()
+        self.me.move()
+        if arcade.check_for_collision(self.me,self.ball):
+            self.ball.change_y*=-1
+
+        if self.ball.center_x+8>self.width:
+            self.ball.change_x*=-1
+        if self.ball.center_x-8<0:
+            self.ball.change_x*=-1
+
+        if self.ball.center_y+8>self.height:
+            self.ball.change_y*=-1

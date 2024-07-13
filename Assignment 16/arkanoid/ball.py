@@ -8,10 +8,10 @@ class Ball(arcade.Sprite):
         self.width = self.radius*2
         self.height = self.radius*2
         self.center_x = game.width//2
-        self.center_y = game.height//4
+        self.center_y = game.height//3
         self.change_x = random.choice([-1,1])
         self.change_y = -1
-        self.speed = 5
+        self.speed = 3
         self.color = arcade.color.RED
 
     def move(self):
