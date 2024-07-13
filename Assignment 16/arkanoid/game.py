@@ -26,9 +26,31 @@ class Game(arcade.Window):
                                       WINDOW_SIZE_WIDTH, WINDOW_SIZE_HEIGHT, self.background)
         self.me.draw()
         self.ball.draw()
-        self.walls_list = [walls.Walls(self.width//2, self.height//2, arcade.color.RED, 1), walls.Walls(
-            (self.width//2)+30, (self.height//2)+30, arcade.color.BLUE, 2), walls.Walls((self.width//2)+60, (self.height//2)+60, arcade.color.GREEN, 3)]
 
+        coordinate_list_red = [[25, 300], [80, 300], [135, 300], [190, 300], [245, 300], [300, 300], [355, 300], [410, 300], [465, 300], [520, 300], [575, 300]]
+        coordinate_list_blue = [[25, 330], [80, 330], [135, 330], [190, 330], [245, 330], [300, 330], [355, 330], [410, 330], [465, 330], [520, 330], [575, 330]]
+        coordinate_list_green = [[25, 360], [80, 360], [135, 360], [190, 360], [245, 360], [300, 360], [355, 360], [410, 360], [465, 360], [520, 360], [575, 360]]
+
+        self.walls_list = []
+
+        for coordinate in coordinate_list_red:
+            wall = walls.Walls(arcade.color.RED, 1)  # تنظیم رنگ و امتیاز برای دیواره
+            wall.center_x = coordinate[0]
+            wall.center_y = coordinate[1]
+            self.walls_list.append(wall)
+
+        for coordinate in coordinate_list_blue:
+            wall = walls.Walls(arcade.color.BLUE, 2)  # تنظیم رنگ و امتیاز برای دیواره
+            wall.center_x = coordinate[0]
+            wall.center_y = coordinate[1]
+            self.walls_list.append(wall)
+
+        for coordinate in coordinate_list_green:
+            wall = walls.Walls(arcade.color.GREEN, 3)  # تنظیم رنگ و امتیاز برای دیواره
+            wall.center_x = coordinate[0]
+            wall.center_y = coordinate[1]
+            self.walls_list.append(wall)
+        
         for wall in self.walls_list:
             arcade.draw_rectangle_filled(
                 wall.center_x, wall.center_y, wall.width, wall.height, wall.color)
