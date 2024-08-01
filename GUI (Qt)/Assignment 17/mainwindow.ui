@@ -15,34 +15,43 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget {
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,
-                                       stop: 0 #B68D30, stop: 1 #D6AD60);
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #B68D30, stop: 1 #D6AD60);
 }
 QLineEdit {
     background-color: #122620;
     border: 1px solid #CCCCCC;
     padding: 5px;
     border-radius: 3px;
+    color: white; /* Text color */
 }
 QPushButton {
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,
-                                       stop: 0 #E6D7B8, stop: 1 #F4EBD0); /* Gradient from slightly darker to original color */
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #E6D7B8, stop: 1 #F4EBD0);
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+    border: 1px solid #CCCCCC; /* Button border */
+}
+QPushButton:hover {
+    background-color: white;
     border-radius: 10px;
     padding: 10px;
     color: black;
 }
-
-QPushButton:hover {
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,
-                                       stop: 0 #EDECF4, stop: 1 #F4ECEF); /* Adjusted gradient for hover effect */
-}
-</string>
+QPushButton:pressed {
+    background-color: #D6AD60;
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="enabled">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
-   <widget class="QLineEdit" name="history_line">
+   <widget class="QLineEdit" name="history_box">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -55,7 +64,10 @@ QPushButton:hover {
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="input_line">
+   <widget class="QLineEdit" name="input_box">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -66,6 +78,9 @@ QPushButton:hover {
     </property>
    </widget>
    <widget class="QPushButton" name="divide">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>340</x>
@@ -84,6 +99,9 @@ QPushButton:hover {
     </property>
    </widget>
    <widget class="QPushButton" name="multiple">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>340</x>
@@ -102,6 +120,9 @@ QPushButton:hover {
     </property>
    </widget>
    <widget class="QPushButton" name="minus">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>340</x>
@@ -120,6 +141,9 @@ QPushButton:hover {
     </property>
    </widget>
    <widget class="QPushButton" name="plus">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>340</x>
@@ -138,6 +162,9 @@ QPushButton:hover {
     </property>
    </widget>
    <widget class="QPushButton" name="result">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>340</x>
@@ -156,6 +183,9 @@ QPushButton:hover {
     </property>
    </widget>
    <widget class="QPushButton" name="percent">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -174,6 +204,9 @@ QPushButton:hover {
     </property>
    </widget>
    <widget class="QPushButton" name="n6">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -192,6 +225,9 @@ QPushButton:hover {
     </property>
    </widget>
    <widget class="QPushButton" name="dot">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -210,6 +246,9 @@ QPushButton:hover {
     </property>
    </widget>
    <widget class="QPushButton" name="n9">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -228,6 +267,9 @@ QPushButton:hover {
     </property>
    </widget>
    <widget class="QPushButton" name="n3">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>280</x>
@@ -246,6 +288,9 @@ QPushButton:hover {
     </property>
    </widget>
    <widget class="QPushButton" name="assign">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>220</x>
@@ -264,6 +309,9 @@ QPushButton:hover {
     </property>
    </widget>
    <widget class="QPushButton" name="n5">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>220</x>
@@ -282,6 +330,9 @@ QPushButton:hover {
     </property>
    </widget>
    <widget class="QPushButton" name="n0">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -300,6 +351,9 @@ QPushButton:hover {
     </property>
    </widget>
    <widget class="QPushButton" name="n8">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>220</x>
@@ -313,11 +367,20 @@ QPushButton:hover {
       <pointsize>14</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
     <property name="text">
      <string>8</string>
     </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
    </widget>
    <widget class="QPushButton" name="n2">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>220</x>
@@ -336,6 +399,9 @@ QPushButton:hover {
     </property>
    </widget>
    <widget class="QPushButton" name="clear">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -354,6 +420,9 @@ QPushButton:hover {
     </property>
    </widget>
    <widget class="QPushButton" name="n4">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -372,6 +441,9 @@ QPushButton:hover {
     </property>
    </widget>
    <widget class="QPushButton" name="n7">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -390,6 +462,9 @@ QPushButton:hover {
     </property>
    </widget>
    <widget class="QPushButton" name="n1">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -408,6 +483,9 @@ QPushButton:hover {
     </property>
    </widget>
    <widget class="QPushButton" name="sin">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -426,6 +504,9 @@ QPushButton:hover {
     </property>
    </widget>
    <widget class="QPushButton" name="cot">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -444,6 +525,9 @@ QPushButton:hover {
     </property>
    </widget>
    <widget class="QPushButton" name="tan">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -462,6 +546,9 @@ QPushButton:hover {
     </property>
    </widget>
    <widget class="QPushButton" name="cos">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -480,6 +567,9 @@ QPushButton:hover {
     </property>
    </widget>
    <widget class="QPushButton" name="log">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -498,6 +588,9 @@ QPushButton:hover {
     </property>
    </widget>
    <widget class="QPushButton" name="sqrt">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>90</x>
