@@ -79,7 +79,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="divide">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -100,7 +100,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="multiple">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -121,7 +121,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="minus">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -142,7 +142,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="plus">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -163,7 +163,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="result">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -184,7 +184,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="percent">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -205,7 +205,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="n6">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -226,7 +226,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="dot">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -247,7 +247,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="n9">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -268,7 +268,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="n3">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -289,7 +289,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="assign">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -310,7 +310,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="n5">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -331,7 +331,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="n0">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -352,7 +352,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="n8">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -379,7 +379,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="n2">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -400,7 +400,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="clear">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -421,7 +421,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="n4">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -442,7 +442,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="n7">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -463,7 +463,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="n1">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -484,7 +484,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="sin">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -505,7 +505,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="cot">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -526,7 +526,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="tan">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -547,7 +547,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="cos">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -568,7 +568,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="log">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
@@ -589,7 +589,7 @@ QPushButton:pressed {
    </widget>
    <widget class="QPushButton" name="sqrt">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="geometry">
      <rect>
