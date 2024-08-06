@@ -17,7 +17,7 @@
 
 <p>the styles which sets to the <b>mainwindow.ui</b> file uses css styles that attach to the whole file</p>
 
-![gif](assets\running.gif)
+![gif](running.gif)
 
 ### Run
 <p>it just needs to run calculator.py</p>
