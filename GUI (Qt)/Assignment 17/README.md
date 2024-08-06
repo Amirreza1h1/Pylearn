@@ -13,6 +13,8 @@
 
 ## calculator
 
+<p>the calculator contains the following operators which are sin, cos, cot, tan, log_10, radical(sqrt), divide, multiple, add and minus</p>
+
 <p>the styles which sets to the <b>mainwindow.ui</b> file uses css styles that attach to the whole file</p>
 
 ![gif](assets\running.gif)
