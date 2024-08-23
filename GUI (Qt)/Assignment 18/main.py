@@ -40,6 +40,16 @@ def restart():
         for j in range(3):
             cells[i][j].setText("")
     my_window.vs_cpu.setChecked(True)
+    my_window.draw.clear()
+    my_window.draw.setText(str(0))
+    my_window.X_status.clear()
+    my_window.X_status.setText(str(0))
+    my_window.O_status.clear()
+    my_window.O_status.setText(str(0))
+
+
+
+
 
 
 
