@@ -17,6 +17,12 @@ def new_game():
     global player_current,player_turn
     player_current="X"
     player_turn="O"
+    if my_window.vs_cpu.isChecked():
+        player_text="Player_1 = X"+"\n"+"Player_2 = cpu"+"\n"
+        my_window.players.setPlainText(player_text)
+    elif my_window.vs_player.isChecked():
+        player_text="Player_1 = X"+"\n"+"Player_2 = O"+"\n"
+        my_window.players.setPlainText(player_text)
     for i in range(3):
         for j in range(3):
             cells[i][j].setText("")
@@ -50,7 +56,7 @@ def play(row, col):
         if my_window.vs_player.isChecked():
             player_current = "O" if player_current == "X" else "X"
             player_turn = "X" if player_turn == "O" else "O"
-            my_window.turn_status.setText(f"It's {player_turn}'s turn")
+            my_window.turn_status.setText(f"It's {player_current}'s turn")
         
         # If playing against CPU, make the AI move after player's move
         elif my_window.vs_cpu.isChecked():
@@ -101,15 +107,31 @@ def check_win_condition():
 def declare_winner(winner):
     msg_box = QMessageBox(text=f"Player {winner} wins!")
     msg_box.exec()
-
+    update_status(winner)
     new_game()  # Reset the game after a win
 
 def declare_draw():
     msg_box = QMessageBox(text="It's a draw!")
     msg_box.exec()
-    
+    update_status(winner="draw")
     new_game()  # Reset the game after a draw
 
+def update_status(winner):
+    if winner=="draw":
+        value=int(my_window.draw.text())+1
+        my_window.draw.clear()
+        my_window.draw.setText(str(value))
+        return
+    elif winner=="X":
+        value=int(my_window.X_status.text())+1
+        my_window.X_status.clear()
+        my_window.X_status.setText(str(value))
+        return
+    elif winner=="O":
+        value=int(my_window.O_status.text())+1
+        my_window.O_status.clear()
+        my_window.O_status.setText(str(value))
+        return
 
 loader = QUiLoader()
 my_app = QApplication(sys.argv)
@@ -123,11 +145,13 @@ for i in range(3):
     for j in range(3):
         cells[i][j].clicked.connect(partial(play, i, j))
 
+
 my_window.about.clicked.connect(lambda: about())
 my_window.new_game.clicked.connect(new_game)
 my_window.restart.clicked.connect(restart)
 
 my_window.vs_cpu.setChecked(True)
+
 
 my_window.show()
 
