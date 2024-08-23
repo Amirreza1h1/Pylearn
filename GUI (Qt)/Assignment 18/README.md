@@ -2,7 +2,7 @@
 تمرین جلسه هجدهم
 ## Python-GUI(Qt)
 
-![GUI](assets\GUI.jpg)
+![GUI](assets/GUI.jpg)
 
 ### Session 18
 <p>TIC TAC TOE game</p>
@@ -22,7 +22,7 @@
 
 <p>the styles which sets to the <b><i>main.ui</i></b> file uses css styles that attach to the whole file</p>
 
-![gif](assets\Tic_Tac_Toe.gif)
+![gif](assets/Tic_Tac_Toe.gif)
 
 ### Run
 <p>it just needs to run calculator.py</p>
