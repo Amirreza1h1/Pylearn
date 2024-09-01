@@ -25,7 +25,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">MainWindow {
+   <string notr="true">QMainWindow {
     background-color: #d4f1f4;
 }
 
@@ -43,11 +43,10 @@ QPushButton {
     border: none;
     padding: 10px 15px;
 	font-size: 16px;
-    cursor: pointer;
 }
 
 QPushButton:hover {
-    background-color: #d4f1f4;
+    background-color: #0000ff;
 }
 
 QTextEdit {
