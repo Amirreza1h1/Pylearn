@@ -31,7 +31,7 @@ class Ui_MainWindow(object):
         font = QFont()
         font.setPointSize(16)
         MainWindow.setFont(font)
-        MainWindow.setStyleSheet(u"QMainWindow {\n"
+        MainWindow.setStyleSheet(u"QWidget {\n"
 "    background-color: #d4f1f4;\n"
 "}\n"
 "\n"

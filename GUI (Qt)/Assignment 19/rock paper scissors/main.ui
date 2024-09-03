@@ -25,7 +25,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QMainWindow {
+   <string notr="true">QWidget {
     background-color: #d4f1f4;
 }
 
