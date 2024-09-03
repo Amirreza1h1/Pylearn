@@ -24,15 +24,15 @@ class Ui_MainWindow(object):
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(492, 489)
         MainWindow.setStyleSheet(u"QWidget {\n"
-"    background-color: #f0f0f0;\n"
+"    background-color: #669BBC;\n"
 "}\n"
 "\n"
 "QPushButton {\n"
 "    font-size: 26px;\n"
 "    font-weight: bold;\n"
 "    color: #333;\n"
-"    background-color: #e0e0e0;\n"
-"    border: 2px solid #aaa;\n"
+"    background-color: #FDF0D5;\n"
+"    border: 2px solid #C1121F;\n"
 "    border-radius: 10px;\n"
 "    min-width: 60px;\n"
 "    min-height: 60px;\n"
