@@ -23,7 +23,42 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(774, 551)
-        MainWindow.setStyleSheet(u"text: center;")
+        MainWindow.setStyleSheet(u"\n"
+"QPushButton {\n"
+"	border: 2px solid #8f8f91;\n"
+"	border-radius: 6px;\n"
+"	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                              stop: 0 #f6f7fa, stop: 1 #dadbde);\n"
+"	min-width: 80px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                              stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"	border: none;\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"	border-color: navy;\n"
+"}\n"
+"\n"
+"QLineEdit {\n"
+"	border: 1px solid #ccc;\n"
+"	border-radius: 4px;\n"
+"	padding: 2px;\n"
+"}\n"
+"\n"
+"QLineEdit[readOnly=\"true\"] {\n"
+"	background-color: #e0e0e0;\n"
+"	color: #666;\n"
+"}\n"
+"\n"
+"QGridLayout {\n"
+"	spacing: 10px;\n"
+"}")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.gridLayout = QGridLayout(self.centralwidget)
@@ -112,7 +147,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Unit Convertor", None))
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
         self.lineEdit_3.setText(QCoreApplication.translate("MainWindow", u"From:", None))

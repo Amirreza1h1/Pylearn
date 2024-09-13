@@ -11,10 +11,45 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Unit Convertor</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">text: center;</string>
+   <string notr="true">
+QPushButton {
+	border: 2px solid #8f8f91;
+	border-radius: 6px;
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                              stop: 0 #f6f7fa, stop: 1 #dadbde);
+	min-width: 80px;
+}
+
+QPushButton:pressed {
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                              stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+	border: none;
+}
+
+QPushButton:default {
+	border-color: navy;
+}
+
+QLineEdit {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 2px;
+}
+
+QLineEdit[readOnly=&quot;true&quot;] {
+	background-color: #e0e0e0;
+	color: #666;
+}
+
+QGridLayout {
+	spacing: 10px;
+}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
