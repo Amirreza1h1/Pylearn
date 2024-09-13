@@ -10,10 +10,11 @@ class MainWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.measurement_types = {
-            "Mass": ["kg", "g", "mg"],
-            "Length": ["m", "cm", "mm"],
+            "Mass": ["kg", "g", "ton","pounds"],
+            "Length": ["inch","km","m", "cm", "mm"],
             "Temperature": ["°C", "K", "°F"],
-            "Volume": ["L", "ml", "t"]
+            "Volume": ["L", "ml", "t"],
+            "Digital volume":["bit","byte","kilo byte","mega byte","Giga byte","Tera byte"]
         }
         # self.From_box.clear()
         # self.To_box.clear()
