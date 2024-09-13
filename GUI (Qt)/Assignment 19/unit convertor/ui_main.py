@@ -71,6 +71,7 @@ class Ui_MainWindow(object):
         self.Type_box.addItem("")
         self.Type_box.addItem("")
         self.Type_box.addItem("")
+        self.Type_box.addItem("")
         self.Type_box.setObjectName(u"Type_box")
         sizePolicy = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Maximum)
         sizePolicy.setHorizontalStretch(0)
@@ -171,6 +172,7 @@ class Ui_MainWindow(object):
         self.Type_box.setItemText(1, QCoreApplication.translate("MainWindow", u"Length", None))
         self.Type_box.setItemText(2, QCoreApplication.translate("MainWindow", u"Temperature", None))
         self.Type_box.setItemText(3, QCoreApplication.translate("MainWindow", u"Volume", None))
+        self.Type_box.setItemText(4, QCoreApplication.translate("MainWindow", u"Digital volume", None))
 
         self.lineEdit_6.setText(QCoreApplication.translate("MainWindow", u"Convertor", None))
         self.lineEdit_5.setText(QCoreApplication.translate("MainWindow", u"=", None))
