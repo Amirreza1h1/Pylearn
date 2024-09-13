@@ -1,4 +1,5 @@
 import sys
+import random
 from functools import partial
-from PySide6.QtWidgets import QApplication, QMessageBox, QRadioButton
-from PySide6.QtUiTools import QUiLoader
+from PySide6.QtWidgets import QApplication, QMessageBox, QMainWindow
+from ui_main import Ui_MainWindow
