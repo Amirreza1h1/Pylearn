@@ -23,7 +23,10 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(601, 531)
-        MainWindow.setStyleSheet(u"\n"
+        MainWindow.setStyleSheet(u"QMainWindow {\n"
+"	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                              stop: 0 #a33178, stop: 1 #9942b4);\n"
+"}\n"
 "QPushButton {\n"
 "	border: 2px solid #8f8f91;\n"
 "	border-radius: 6px;\n"
