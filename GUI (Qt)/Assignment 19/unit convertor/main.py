@@ -221,11 +221,6 @@ class MainWindow(QMainWindow):
             QMessageBox.warning(self, "Invalid Input",
                                 "Please enter a valid number.")
 
-    def reset_converter(self):
-        self.ui.From_input.clear()
-        self.ui.To_output.clear()
-        self.update_boxes(self.ui.Type_box.currentText())
-
 
 my_app = QApplication(sys.argv)
 main_window = MainWindow()
