@@ -81,11 +81,6 @@ QGridLayout {
       </item>
       <item>
        <property name="text">
-        <string>Volume</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
         <string>Digital volume</string>
        </property>
       </item>
