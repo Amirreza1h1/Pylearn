@@ -15,7 +15,7 @@ class MainWindow(QMainWindow):
         self.paper.clicked.connect(self.on_paper_click)
         self.scissors.clicked.connect(self.on_scissors_click)
         self.restart.clicked.connect(self.on_restart_click)
-        self.about.clicked.connect(self.on_about_click)
+        self.about.clicked.connect(self.about)
 
     def on_rock_click(self):
         pass
@@ -29,8 +29,10 @@ class MainWindow(QMainWindow):
     def on_restart_click(self):
         pass
 
-    def on_about_click(self):
-        pass
+    def about():
+        msg_box = QMessageBox(
+            text="Rock Paper Scissors \n It's a game that: \n rock wins against scissors. \n scissors wins against paper. \n paper wins against rock. \n Let's play!")
+        msg_box.exec()
 
 my_app = QApplication(sys.argv)
 my_window = MainWindow()
