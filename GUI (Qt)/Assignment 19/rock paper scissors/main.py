@@ -25,7 +25,7 @@ class MainWindow(QMainWindow):
         }
 
     def play(self):
-        player_choice = self.sender().objectName().lower() #change it because of gpt
+        player_choice = self.sender().objectName().lower()  # change it because of gpt
         cpu_choice = random.choice(list(self.outcomes.keys()))
 
         player_score = 0
@@ -69,8 +69,3 @@ my_app = QApplication(sys.argv)
 my_window = MainWindow()
 my_window.show()
 my_app.exec()
-
-# my_app = QApplication(sys.argv)
-# my_window = MainWindow()
-# my_window.show()
-# sys.exit(my_app.exec())
