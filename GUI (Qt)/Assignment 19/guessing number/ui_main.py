@@ -63,6 +63,13 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.restart, 0, 2, 1, 1)
 
+        self.guess = QPushButton(self.centralwidget)
+        self.guess.setObjectName(u"guess")
+        sizePolicy.setHeightForWidth(self.guess.sizePolicy().hasHeightForWidth())
+        self.guess.setSizePolicy(sizePolicy)
+
+        self.gridLayout.addWidget(self.guess, 2, 0, 1, 3)
+
         self.about = QPushButton(self.centralwidget)
         self.about.setObjectName(u"about")
         sizePolicy.setHeightForWidth(self.about.sizePolicy().hasHeightForWidth())
@@ -70,30 +77,24 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.about, 0, 0, 1, 1)
 
-        self.counter = QLineEdit(self.centralwidget)
-        self.counter.setObjectName(u"counter")
+        self.user_guess = QLineEdit(self.centralwidget)
+        self.user_guess.setObjectName(u"user_guess")
         sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Maximum)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.counter.sizePolicy().hasHeightForWidth())
-        self.counter.setSizePolicy(sizePolicy1)
-        self.counter.setReadOnly(True)
-
-        self.gridLayout.addWidget(self.counter, 3, 1, 1, 1)
-
-        self.user_guess = QLineEdit(self.centralwidget)
-        self.user_guess.setObjectName(u"user_guess")
         sizePolicy1.setHeightForWidth(self.user_guess.sizePolicy().hasHeightForWidth())
         self.user_guess.setSizePolicy(sizePolicy1)
 
         self.gridLayout.addWidget(self.user_guess, 1, 1, 1, 1)
 
-        self.guess = QPushButton(self.centralwidget)
-        self.guess.setObjectName(u"guess")
-        sizePolicy.setHeightForWidth(self.guess.sizePolicy().hasHeightForWidth())
-        self.guess.setSizePolicy(sizePolicy)
+        self.counter = QLineEdit(self.centralwidget)
+        self.counter.setObjectName(u"counter")
+        sizePolicy1.setHeightForWidth(self.counter.sizePolicy().hasHeightForWidth())
+        self.counter.setSizePolicy(sizePolicy1)
+        self.counter.setBaseSize(QSize(0, 0))
+        self.counter.setReadOnly(True)
 
-        self.gridLayout.addWidget(self.guess, 2, 0, 1, 3)
+        self.gridLayout.addWidget(self.counter, 3, 0, 1, 3)
 
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -105,7 +106,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"game", None))
         self.restart.setText(QCoreApplication.translate("MainWindow", u"Restart", None))
-        self.about.setText(QCoreApplication.translate("MainWindow", u"About", None))
         self.guess.setText(QCoreApplication.translate("MainWindow", u"TRY YOUR GUESS", None))
+        self.about.setText(QCoreApplication.translate("MainWindow", u"About", None))
     # retranslateUi
 
