@@ -8,7 +8,7 @@ from ui_main import Ui_MainWindow
 
 class MainWindow(QMainWindow):
     def __init__(self):
-        super().__init__()
+        super(MainWindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
@@ -67,5 +67,6 @@ class MainWindow(QMainWindow):
 
 my_app = QApplication(sys.argv)
 my_window = MainWindow()
-my_window.show()
-my_app.exec()
+my_window.ui.show()
+# my_app.exec_()
+sys.exit(my_app.exec_())
