@@ -6,12 +6,40 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>310</width>
-    <height>292</height>
+    <width>322</width>
+    <height>331</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"> QWidget {
+            background-color: #222222;
+        }
+
+QPushButton {
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+        
+        QPushButton:hover {
+            background-color: #2980b9;
+        }
+        
+        QLineEdit {
+            background-color: #f1c40f;
+            color: black;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #e74c3c;
+            padding: 5px;
+            font-size: 16px;
+            font-weight: bold;
+        }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -64,7 +92,7 @@
       </property>
      </widget>
     </item>
-    <item row="2" column="1">
+    <item row="2" column="0" colspan="3">
      <widget class="QPushButton" name="guess">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Minimum" vsizetype="Maximum">

@@ -22,7 +22,33 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(310, 292)
+        MainWindow.resize(322, 331)
+        MainWindow.setStyleSheet(u" QWidget {\n"
+"            background-color: #222222;\n"
+"        }\n"
+"\n"
+"QPushButton {\n"
+"            background-color: #3498db;\n"
+"            color: white;\n"
+"            border-radius: 5px;\n"
+"            padding: 10px 20px;\n"
+"            font-weight: bold;\n"
+"        }\n"
+"        \n"
+"        QPushButton:hover {\n"
+"            background-color: #2980b9;\n"
+"        }\n"
+"        \n"
+"        QLineEdit {\n"
+"            background-color: #f1c40f;\n"
+"            color: black;\n"
+"            border-style: solid;\n"
+"            border-width: 1px;\n"
+"            border-color: #e74c3c;\n"
+"            padding: 5px;\n"
+"            font-size: 16px;\n"
+"            font-weight: bold;\n"
+"        }")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.gridLayout = QGridLayout(self.centralwidget)
@@ -67,7 +93,7 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.guess.sizePolicy().hasHeightForWidth())
         self.guess.setSizePolicy(sizePolicy)
 
-        self.gridLayout.addWidget(self.guess, 2, 1, 1, 1)
+        self.gridLayout.addWidget(self.guess, 2, 0, 1, 3)
 
         MainWindow.setCentralWidget(self.centralwidget)
 
