@@ -103,7 +103,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"game", None))
         self.restart.setText(QCoreApplication.translate("MainWindow", u"Restart", None))
         self.about.setText(QCoreApplication.translate("MainWindow", u"About", None))
         self.guess.setText(QCoreApplication.translate("MainWindow", u"TRY YOUR GUESS", None))
