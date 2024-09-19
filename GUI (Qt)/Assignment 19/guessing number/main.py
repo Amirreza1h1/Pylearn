@@ -28,6 +28,7 @@ class MainWindow(QMainWindow):
         msg_box.exec()
         self.computer_number = random.randint(0, 100)
         self.ui.counter.clear()
+        self.user_counter = 0
 
     def play(self):
         try:
@@ -38,6 +39,7 @@ class MainWindow(QMainWindow):
                 msg_box.exec()
                 self.computer_number = random.randint(0, 100)
                 self.ui.counter.clear()
+                self.user_counter = 0
             else:
                 if user_guess > self.computer_number:
                     self.user_counter+=1
