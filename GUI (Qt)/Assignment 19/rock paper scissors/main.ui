@@ -23,7 +23,7 @@ QLineEdit {
 	border-radius: 50px;
     border: 3px solid #ccc;
     padding: 15px;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 QPushButton {
@@ -48,6 +48,9 @@ QPushButton:hover {
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
       <property name="readOnly">
        <bool>true</bool>
       </property>
@@ -60,6 +63,9 @@ QPushButton:hover {
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
       <property name="readOnly">
        <bool>true</bool>
@@ -100,6 +106,9 @@ QPushButton:hover {
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
       <property name="readOnly">
        <bool>true</bool>
       </property>
@@ -138,6 +147,9 @@ QPushButton:hover {
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
       </property>
       <property name="readOnly">
        <bool>true</bool>

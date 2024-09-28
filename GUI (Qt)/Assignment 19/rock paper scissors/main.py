@@ -20,19 +20,40 @@ class MainWindow(QMainWindow):
         self.choice={1:"Rock 🪨",
                      2:"Paper 📄",
                      3:"Scissors ✂️"}
+        self.number_user_win=0
+        self.number_cpu_win=0
 
 
     def ai_play(self):
-        ai_choice=self.choice(random.randint(1,3))
+        ai_choice=self.choice[random.randint(1,3)]
         return ai_choice
 
 
     def play(self,user_push):
         try:
-            user_choice=self.choice(user_push)
+            user_choice=self.choice[user_push]
             cpu_choice=self.ai_play()
-            
 
+            if user_choice == cpu_choice:
+                result = "It's a tie!"
+            elif (user_choice == "Rock 🪨" and cpu_choice == "Scissors ✂️") or \
+                 (user_choice == "Paper 📄" and cpu_choice == "Rock 🪨") or \
+                 (user_choice == "Scissors ✂️" and cpu_choice == "Paper 📄"):
+                result = "You wins!"
+                self.number_user_win+=1
+            else:
+                result = "CPU wins!"
+                self.number_cpu_win+=1
+
+
+            self.ui.cpu_choice.setText(f"{cpu_choice}")
+            self.ui.user_choice.setText(f"{user_choice}")
+
+            msg_box = QMessageBox(text=result, icon=QMessageBox.Information)
+            msg_box.exec()
+
+            self.ui.user_win.setText(f"Player's wins : {self.number_user_win}")
+            self.ui.cpu_win.setText(f"Cpu's wins : {self.number_cpu_win}")
 
         except ValueError:
             QMessageBox.warning(self, "Invalid Input",

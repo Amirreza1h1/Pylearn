@@ -32,7 +32,7 @@ class Ui_MainWindow(object):
 "	border-radius: 50px;\n"
 "    border: 3px solid #ccc;\n"
 "    padding: 15px;\n"
-"	font-size: 16px;\n"
+"	font-size: 14px;\n"
 "}\n"
 "\n"
 "QPushButton {\n"
@@ -57,6 +57,7 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.cpu_win.sizePolicy().hasHeightForWidth())
         self.cpu_win.setSizePolicy(sizePolicy)
+        self.cpu_win.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.cpu_win.setReadOnly(True)
 
         self.gridLayout.addWidget(self.cpu_win, 0, 4, 1, 1)
@@ -68,6 +69,7 @@ class Ui_MainWindow(object):
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.user_choice.sizePolicy().hasHeightForWidth())
         self.user_choice.setSizePolicy(sizePolicy1)
+        self.user_choice.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.user_choice.setReadOnly(True)
 
         self.gridLayout.addWidget(self.user_choice, 2, 2, 1, 1)
@@ -96,6 +98,7 @@ class Ui_MainWindow(object):
         self.cpu_choice.setObjectName(u"cpu_choice")
         sizePolicy1.setHeightForWidth(self.cpu_choice.sizePolicy().hasHeightForWidth())
         self.cpu_choice.setSizePolicy(sizePolicy1)
+        self.cpu_choice.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.cpu_choice.setReadOnly(True)
 
         self.gridLayout.addWidget(self.cpu_choice, 1, 2, 1, 1)
@@ -118,6 +121,7 @@ class Ui_MainWindow(object):
         self.user_win.setObjectName(u"user_win")
         sizePolicy.setHeightForWidth(self.user_win.sizePolicy().hasHeightForWidth())
         self.user_win.setSizePolicy(sizePolicy)
+        self.user_win.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.user_win.setReadOnly(True)
 
         self.gridLayout.addWidget(self.user_win, 0, 0, 1, 1)
@@ -141,10 +145,10 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Game", None))
-        self.scissors.setText(QCoreApplication.translate("MainWindow", u"Scissors ✂️", None))
+        self.scissors.setText(QCoreApplication.translate("MainWindow", u"Scissors", None))
         self.restart.setText(QCoreApplication.translate("MainWindow", u"Restart", None))
-        self.paper.setText(QCoreApplication.translate("MainWindow", u"Paper 📄", None))
-        self.rock.setText(QCoreApplication.translate("MainWindow", u"Rock 🪨", None))
+        self.paper.setText(QCoreApplication.translate("MainWindow", u"Paper", None))
+        self.rock.setText(QCoreApplication.translate("MainWindow", u"Rock", None))
         self.about.setText(QCoreApplication.translate("MainWindow", u"About", None))
     # retranslateUi
 
