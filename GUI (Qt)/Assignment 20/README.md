@@ -1,5 +1,5 @@
 # Py-learn-assignment-20
-تمرین جلسه نونزدهم
+تمرین جلسه بیستم
 ## Python-GUI(Qt)
 
 ![GUI](assets/GUI.jpg)
@@ -44,3 +44,9 @@ print(is_symmetrical([3,2,1]))  #False
 ```
 
 <p>its the output of the code when we run and because we use random, you see that each time different persons marry each other.</p>
+
+#### game
+
+<p>It's a game which The game has 5 rounds without the tie rounds. who gets 3 wins, win the game. the winner of each round is the one who has diiferent choice. <i>if two players get 2 win and the other one get one who get one win the game.</p>
+
+![gif](exercise!/game/assets/ro-posht-game.gif)
