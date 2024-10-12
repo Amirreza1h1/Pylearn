@@ -72,15 +72,15 @@ class MainWindow(QMainWindow):
 
 
     def restart(self):
-        if self.number_user_win==3:
+        if self.number_user_win>=3:
             msg_box = QMessageBox(
             text="You have won the game!🎊🎉✌️ \n Game restart!")
             msg_box.exec()
-        elif self.number_cpu_1_win==3:
+        elif self.number_cpu_1_win>=3:
             msg_box = QMessageBox(
             text="CPU 1 has won the game!🎊🎉✌️ \n Game restart!")
             msg_box.exec()
-        elif self.number_cpu_2_win==3:
+        elif self.number_cpu_2_win>=3:
             msg_box = QMessageBox(
             text="CPU 2 has won the game!🎊🎉✌️ \n Game restart!")
             msg_box.exec()
