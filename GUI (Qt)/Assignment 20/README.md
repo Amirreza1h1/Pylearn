@@ -15,7 +15,9 @@ https://sqlitebrowser.org/dl
 
 #### database intro
 
-<p>we learn about the simple query like SELECT,UPDATE,INSERT and DELETE</p>
+<p>we learn about the simple queries like SELECT,UPDATE,INSERT and DELETE</p>
+<p>In file Database intro, we have some sql code for queries we learned.
+The file with .sql suffix is sql code and the one with .db suffix is our database.</p>
 
 ---
 
@@ -23,7 +25,7 @@ https://sqlitebrowser.org/dl
 
 <p>it's code for working with arrays and reminder of how to work with a data that is stored.</p>
 
-<p><b><i>symmetrical array</b></i> is a function which tell us if a array is equal to its reverse.</p>
+<p><b><i>symmetrical array</b></i> is a function which tells us if an array is equal to its reverse.</p>
 
 ```
 print(is_symmetrical([1,3,4,3,1]))  #True
@@ -43,10 +45,10 @@ print(is_symmetrical([3,2,1]))  #False
 
 ```
 
-<p>its the output of the code when we run and because we use random, you see that each time different persons marry each other.</p>
+<p>its the output of the code when we've ran, you see that each time different people marry each other.</p>
 
 #### game
 
-<p>It's a game which The game has 5 rounds without the tie rounds. who gets 3 wins, win the game. the winner of each round is the one who has diiferent choice. <i>if two players get 2 win and the other one get one who get one win the game.</p>
+<p>It's a game which the game has 5 rounds without the tie rounds. who gets 3 wins, win the game. the winner of each round is the one who has different choice. <i>if two players get 2 wins and the other one get one who get one win the game.</p>
 
-![gif](exercise!/game/assets/ro-posht-game.gif)
+![gif](assets/ro-posht-game.gif)
