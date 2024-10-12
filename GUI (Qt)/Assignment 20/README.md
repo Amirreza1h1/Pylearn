@@ -6,7 +6,7 @@
 
 ### Session 20
 
-<p>this session, we work with sqlite and start to realise the definition of database.</p>
+<p>this session, we work with sqlite and start to realize the definition of database.</p>
 <p>From link below you can download a sqlite database for your usage.</p>
 
 https://sqlitebrowser.org/dl
@@ -32,7 +32,7 @@ print(is_symmetrical([1,3,4,3,1]))  #True
 print(is_symmetrical([3,2,1]))  #False
 ```
 
-<p><b><i>random mariage</b></i> is a function which provides a boy and a girl marry each other and boys or girls just have one spouse</p>
+<p><b><i>random marriage</b></i> is a function which provides a boy and a girl marry each other and boys or girls just have one spouse</p>
 
 ```
 ['(arman,mahtab)', '(sobhan,kiana)', '(kiya,minoo)', '(homan,mina)', '(sajjad,hane)', '(mohammad,faezeh)', '(abdollah,harir)', '(mahdi,fateme)']
