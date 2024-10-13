@@ -49,6 +49,13 @@ print(is_symmetrical([3,2,1]))  #False
 
 #### game
 
-<p>It's a game which the game has 5 rounds without the tie rounds. who gets 3 wins, win the game. the winner of each round is the one who has different choice. <i>if two players get 2 wins and the other one get one who get one win the game.</p>
+<p>It's a game which the game has 5 rounds without the tie rounds. who gets 3 wins, win the game. the winner of each round is the one who has different choice. <i>if two players get 2 wins and the other one get one who get one win the game.</i></p>
+
+```
+GUI (Qt)\Assignment 20\exercise!\game\main.py
+to run this game.
+```
+
+
 
 ![gif](assets/ro-posht-game.gif)
