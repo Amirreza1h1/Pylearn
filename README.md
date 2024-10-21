@@ -11,6 +11,8 @@ practicing for being better
 
 - Sololearn Python intermediate certificate
 
+![intermediate](Intermediate.jpg)
+
 #### arcade library
 
 <p>There are games like: Spaceship game, snake, Pong, arkanoid.</p>
