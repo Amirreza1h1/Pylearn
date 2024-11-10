@@ -1,17 +1,15 @@
-import Media
+from Media import Media
 import Film
 import Series
 import Documentary
 import Clip
 import Actor
-import Db
+from databasesql import Db, PRODUCTS
 
-PRODUCTS = []
 ACTORS = []
 
 print("Welcome to Media Store")
 print("Loading...")
-Db.read()
 print("Data loaded.")
 
 while True:

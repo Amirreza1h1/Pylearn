@@ -1,11 +1,13 @@
 import sqlite3
 from main import PRODUCTS
-import Media
+from Media import Media
 import Film
 import Clip
 import Series
 import Documentary
 import Actor
+
+PRODUCTS = []
 
 class Db:
     def __init__(self):

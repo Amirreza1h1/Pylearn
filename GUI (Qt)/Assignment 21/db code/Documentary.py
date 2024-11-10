@@ -1,4 +1,4 @@
-import Media
+from Media import Media
 import Actor
 
 actors = []
