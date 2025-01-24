@@ -24,6 +24,18 @@ class Database:
             return True
         except:
             return False
+        
+    def task_done(self,id):
+        self.cursor.execute(f"SELECT * FROM tasks WHERE id ='{id}'")
+        task = self.cursor.fetchone()
+        if task !=  None:
+            self.cursor.execute(f"UPDATE tasks SET is_done ='1' WHERE id ='{id}'")
+            self.connection.commit()
+
+    def del_task(self,id):
+        self.cursor.execute(f"DELETE FROM tasks WHERE id = {id}")
+        self.connection.commit()
+        return True
 
     def create_tasks_table(self):
         query = """
