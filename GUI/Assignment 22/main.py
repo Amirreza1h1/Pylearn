@@ -27,7 +27,7 @@ class MainWindow(QMainWindow):
         else:
             msg_box = QMessageBox()
             msg_box.setText("there is a problem🤕")
-            msg_box.exec_()
+            msg_box.exec()
 
     def read_database(self):
         tasks = self.db.get_tasks()
