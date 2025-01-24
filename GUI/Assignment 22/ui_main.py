@@ -15,9 +15,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QCheckBox, QGridLayout, QLabel,
-    QLineEdit, QMainWindow, QPushButton, QSizePolicy,
-    QTextEdit, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QGridLayout, QLabel, QLineEdit,
+    QMainWindow, QPushButton, QSizePolicy, QTextEdit,
+    QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -30,72 +30,27 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.GL_tasks = QGridLayout()
         self.GL_tasks.setObjectName(u"GL_tasks")
-        self.pushButton_5 = QPushButton(self.centralwidget)
-        self.pushButton_5.setObjectName(u"pushButton_5")
-
-        self.GL_tasks.addWidget(self.pushButton_5, 2, 1, 1, 1)
-
-        self.checkBox_3 = QCheckBox(self.centralwidget)
-        self.checkBox_3.setObjectName(u"checkBox_3")
+        self.d_label = QLabel(self.centralwidget)
+        self.d_label.setObjectName(u"d_label")
         sizePolicy = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Maximum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.checkBox_3.sizePolicy().hasHeightForWidth())
-        self.checkBox_3.setSizePolicy(sizePolicy)
+        sizePolicy.setHeightForWidth(self.d_label.sizePolicy().hasHeightForWidth())
+        self.d_label.setSizePolicy(sizePolicy)
+        self.d_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.GL_tasks.addWidget(self.checkBox_3, 3, 0, 1, 1)
+        self.GL_tasks.addWidget(self.d_label, 0, 3, 1, 1)
 
-        self.pushButton = QPushButton(self.centralwidget)
-        self.pushButton.setObjectName(u"pushButton")
+        self.p_label = QLabel(self.centralwidget)
+        self.p_label.setObjectName(u"p_label")
         sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Maximum, QSizePolicy.Policy.Maximum)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
-        self.pushButton.setSizePolicy(sizePolicy1)
-        self.pushButton.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
+        sizePolicy1.setHeightForWidth(self.p_label.sizePolicy().hasHeightForWidth())
+        self.p_label.setSizePolicy(sizePolicy1)
+        self.p_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.GL_tasks.addWidget(self.pushButton, 1, 3, 1, 1)
-
-        self.pushButton_3 = QPushButton(self.centralwidget)
-        self.pushButton_3.setObjectName(u"pushButton_3")
-        sizePolicy1.setHeightForWidth(self.pushButton_3.sizePolicy().hasHeightForWidth())
-        self.pushButton_3.setSizePolicy(sizePolicy1)
-        self.pushButton_3.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
-
-        self.GL_tasks.addWidget(self.pushButton_3, 3, 3, 1, 1)
-
-        self.pushButton_6 = QPushButton(self.centralwidget)
-        self.pushButton_6.setObjectName(u"pushButton_6")
-
-        self.GL_tasks.addWidget(self.pushButton_6, 3, 1, 1, 1)
-
-        self.pushButton_4 = QPushButton(self.centralwidget)
-        self.pushButton_4.setObjectName(u"pushButton_4")
-
-        self.GL_tasks.addWidget(self.pushButton_4, 1, 1, 1, 1)
-
-        self.checkBox_2 = QCheckBox(self.centralwidget)
-        self.checkBox_2.setObjectName(u"checkBox_2")
-        sizePolicy.setHeightForWidth(self.checkBox_2.sizePolicy().hasHeightForWidth())
-        self.checkBox_2.setSizePolicy(sizePolicy)
-
-        self.GL_tasks.addWidget(self.checkBox_2, 2, 0, 1, 1)
-
-        self.pushButton_2 = QPushButton(self.centralwidget)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-        sizePolicy1.setHeightForWidth(self.pushButton_2.sizePolicy().hasHeightForWidth())
-        self.pushButton_2.setSizePolicy(sizePolicy1)
-        self.pushButton_2.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
-
-        self.GL_tasks.addWidget(self.pushButton_2, 2, 3, 1, 1)
-
-        self.checkBox = QCheckBox(self.centralwidget)
-        self.checkBox.setObjectName(u"checkBox")
-        sizePolicy.setHeightForWidth(self.checkBox.sizePolicy().hasHeightForWidth())
-        self.checkBox.setSizePolicy(sizePolicy)
-        self.checkBox.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
-
-        self.GL_tasks.addWidget(self.checkBox, 1, 0, 1, 1)
+        self.GL_tasks.addWidget(self.p_label, 0, 2, 1, 1)
 
         self.is_done_label = QLabel(self.centralwidget)
         self.is_done_label.setObjectName(u"is_done_label")
@@ -113,46 +68,6 @@ class Ui_MainWindow(object):
         self.title_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.GL_tasks.addWidget(self.title_label, 0, 1, 1, 1)
-
-        self.p_label = QLabel(self.centralwidget)
-        self.p_label.setObjectName(u"p_label")
-        sizePolicy1.setHeightForWidth(self.p_label.sizePolicy().hasHeightForWidth())
-        self.p_label.setSizePolicy(sizePolicy1)
-        self.p_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.GL_tasks.addWidget(self.p_label, 0, 2, 1, 1)
-
-        self.d_label = QLabel(self.centralwidget)
-        self.d_label.setObjectName(u"d_label")
-        sizePolicy.setHeightForWidth(self.d_label.sizePolicy().hasHeightForWidth())
-        self.d_label.setSizePolicy(sizePolicy)
-        self.d_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.GL_tasks.addWidget(self.d_label, 0, 3, 1, 1)
-
-        self.checkBox_4 = QCheckBox(self.centralwidget)
-        self.checkBox_4.setObjectName(u"checkBox_4")
-        sizePolicy.setHeightForWidth(self.checkBox_4.sizePolicy().hasHeightForWidth())
-        self.checkBox_4.setSizePolicy(sizePolicy)
-        self.checkBox_4.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
-
-        self.GL_tasks.addWidget(self.checkBox_4, 1, 2, 1, 1)
-
-        self.checkBox_5 = QCheckBox(self.centralwidget)
-        self.checkBox_5.setObjectName(u"checkBox_5")
-        sizePolicy.setHeightForWidth(self.checkBox_5.sizePolicy().hasHeightForWidth())
-        self.checkBox_5.setSizePolicy(sizePolicy)
-        self.checkBox_5.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
-
-        self.GL_tasks.addWidget(self.checkBox_5, 2, 2, 1, 1)
-
-        self.checkBox_6 = QCheckBox(self.centralwidget)
-        self.checkBox_6.setObjectName(u"checkBox_6")
-        sizePolicy.setHeightForWidth(self.checkBox_6.sizePolicy().hasHeightForWidth())
-        self.checkBox_6.setSizePolicy(sizePolicy)
-        self.checkBox_6.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
-
-        self.GL_tasks.addWidget(self.checkBox_6, 3, 2, 1, 1)
 
 
         self.verticalLayout_2.addLayout(self.GL_tasks)
@@ -219,22 +134,10 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.pushButton_5.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
-        self.checkBox_3.setText("")
-        self.pushButton.setText("")
-        self.pushButton_3.setText("")
-        self.pushButton_6.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
-        self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
-        self.checkBox_2.setText("")
-        self.pushButton_2.setText("")
-        self.checkBox.setText("")
+        self.d_label.setText(QCoreApplication.translate("MainWindow", u"delete", None))
+        self.p_label.setText(QCoreApplication.translate("MainWindow", u"priority", None))
         self.is_done_label.setText(QCoreApplication.translate("MainWindow", u"is done!", None))
         self.title_label.setText(QCoreApplication.translate("MainWindow", u"Title", None))
-        self.p_label.setText(QCoreApplication.translate("MainWindow", u"priority", None))
-        self.d_label.setText(QCoreApplication.translate("MainWindow", u"delete", None))
-        self.checkBox_4.setText("")
-        self.checkBox_5.setText("")
-        self.checkBox_6.setText("")
         self.new_title.setText(QCoreApplication.translate("MainWindow", u"title", None))
         self.new_description.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
