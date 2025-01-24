@@ -24,6 +24,100 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(427, 547)
+        MainWindow.setStyleSheet(u"/* Main Window */\n"
+"MainWindow {\n"
+"    background-color: #F0F0F0;\n"
+"    color: #333333;\n"
+"}\n"
+"\n"
+"/* Central Widget */\n"
+"centralwidget {\n"
+"    padding: 20px;\n"
+"}\n"
+"\n"
+"/* Layouts */\n"
+"QVBoxLayout {\n"
+"    spacing: 10px;\n"
+"}\n"
+"\n"
+"QGridLayout {\n"
+"    column-gap: 10px;\n"
+"    row-gap: 10px;\n"
+"}\n"
+"\n"
+"/* Labels */\n"
+"QLabel {\n"
+"    font-family: Arial, sans-serif;\n"
+"    font-size: 14px;\n"
+"    font-weight: bold;\n"
+"}\n"
+"\n"
+"/* Line Edit */\n"
+"QLineEdit {\n"
+"    font-size: 16px;\n"
+"    padding: 5px;\n"
+"    border-radius: 5px;\n"
+"    border: 1px solid #ccc;\n"
+"}\n"
+"\n"
+"/* Text Edit */\n"
+"QTextEdit {\n"
+"    font-family: Consolas, monospace;\n"
+"    font-size: 14px;\n"
+"    padding: 5px;\n"
+"    border-radius: 5px;\n"
+"    border: 1px solid #ccc;\n"
+"}\n"
+"\n"
+"/* Push Button */\n"
+"QPushButton {\n"
+"    font-size: 16px;\n"
+"    padding: 10px 15px;\n"
+"    border-radius: 5px;\n"
+"    border: none;\n"
+"    background-color: #007bff;\n"
+"    color: white;\n"
+"}\n"
+""
+                        "\n"
+"QPushButton:hover {\n"
+"    background-color: #0056b3;\n"
+"}\n"
+"\n"
+"/* Grid Layout Items */\n"
+"QLabel {\n"
+"    font-weight: normal;\n"
+"}\n"
+"\n"
+"/* Checkbox */\n"
+"QCheckBox {\n"
+"    font-size: 14px;\n"
+"}\n"
+"\n"
+"/* Status Label */\n"
+"status_label {\n"
+"    font-size: 14px;\n"
+"    font-weight: bold;\n"
+"    color: green;\n"
+"}\n"
+"\n"
+"/* Priority Label */\n"
+"priority_label {\n"
+"    font-size: 14px;\n"
+"    font-weight: bold;\n"
+"    color: orange;\n"
+"}\n"
+"\n"
+"/* Delete Button */\n"
+"QPushButton#add_btn {\n"
+"    background-color: #dc3545;\n"
+"    color: white;\n"
+"}\n"
+"\n"
+"QPushButton#add_btn:hover {\n"
+"    background-color: #bd2130;\n"
+"}\n"
+"")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout_2 = QVBoxLayout(self.centralwidget)
@@ -82,7 +176,6 @@ class Ui_MainWindow(object):
         sizePolicy2.setHeightForWidth(self.new_title.sizePolicy().hasHeightForWidth())
         self.new_title.setSizePolicy(sizePolicy2)
         font = QFont()
-        font.setPointSize(20)
         font.setBold(True)
         font.setItalic(True)
         self.new_title.setFont(font)
@@ -114,7 +207,6 @@ class Ui_MainWindow(object):
         sizePolicy3.setHeightForWidth(self.add_btn.sizePolicy().hasHeightForWidth())
         self.add_btn.setSizePolicy(sizePolicy3)
         font1 = QFont()
-        font1.setPointSize(20)
         font1.setBold(True)
         font1.setKerning(True)
         self.add_btn.setFont(font1)
@@ -145,8 +237,8 @@ class Ui_MainWindow(object):
 "hr { height: 1px; border-width: 0; }\n"
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-style:italic; text-decoration: underline;\">description</span></p></body></html>", None))
+"</style></head><body style=\" font-family:'Consolas','monospace'; font-size:14px; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Segoe UI'; font-size:9pt; font-style:italic; text-decoration: underline;\">description</span></p></body></html>", None))
         self.new_time.setText(QCoreApplication.translate("MainWindow", u"time:", None))
         self.new_date.setText(QCoreApplication.translate("MainWindow", u"date:", None))
         self.add_btn.setText(QCoreApplication.translate("MainWindow", u"+", None))
