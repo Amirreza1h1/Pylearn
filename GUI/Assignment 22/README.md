@@ -43,5 +43,5 @@ the main file of your project will be execute as a one file with the code below
 pyinstaller main.py --onefile
 ```
 
-i hope so you will learn something,from my repo! 
-good luck
+<p>I hope, you will learn something from my repo!</p> 
+<p>good luck</p>
