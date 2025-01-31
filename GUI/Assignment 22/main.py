@@ -33,33 +33,60 @@ class MainWindow(QMainWindow):
             msg_box.exec()
 
     def read_database(self):
+        # Clear existing widgets to prevent duplication
+        while self.ui.GL_tasks.count():
+            item = self.ui.GL_tasks.takeAt(0)
+            if item.widget():
+                item.widget().deleteLater()
+
         tasks = self.db.get_tasks()
 
-        print(tasks)
-        for i in range(len(tasks)):
+        for i, task in enumerate(tasks):
             new_checkbox = QCheckBox()
-            new_push = QPushButton()
-            new_push.setText(tasks[i][1])
+            new_push = QPushButton(task[1])  # Title as button text
             new_checkbox_priority = QCheckBox()
-            new_push_delete = QPushButton()
+            new_push_delete = QPushButton("❌")
 
-            if tasks[i][6]==True:
+            if task[5]:  # Priority is set
                 new_checkbox_priority.setChecked(True)
                 new_push.setStyleSheet("color: red; background-color: white;")
-
-            if tasks[i][5]==True:
+            else:
+                new_push.setStyleSheet("color: white; background-color: #007bff;")
+            
+            if task[6]:  # Task is done
                 new_checkbox.setChecked(True)
 
-            new_push_delete.setText("❌")
-            self.ui.GL_tasks.addWidget(new_checkbox, i+1, 0)
-            self.ui.GL_tasks.addWidget(new_push, i+1, 1)
-            self.ui.GL_tasks.addWidget(new_checkbox_priority, i+1, 2)
-            self.ui.GL_tasks.addWidget(new_push_delete, i+1, 3)
+            # Add widgets to layout
+            self.ui.GL_tasks.addWidget(new_checkbox, i + 1, 0)
+            self.ui.GL_tasks.addWidget(new_push, i + 1, 1)
+            self.ui.GL_tasks.addWidget(new_checkbox_priority, i + 1, 2)
+            self.ui.GL_tasks.addWidget(new_push_delete, i + 1, 3)
 
-            new_checkbox.clicked.connect(partial(self.db.task_done, tasks[i][0]))
-            new_push_delete.clicked.connect(partial(self.db.del_task, tasks[i][0]))
-            new_push.clicked.connect(partial(self.db.task_data, tasks[i][0]))
-            new_checkbox_priority.clicked.connect(partial(self.db.pri_task, tasks[i][0]))
+            # Connect actions with UI refresh
+            new_checkbox.clicked.connect(lambda _, id=task[0]: [self.toggle_task_done(id), self.read_database()])
+            new_push_delete.clicked.connect(lambda _, row=i + 1, id=task[0]: self.delete_task(row, id))
+            new_push.clicked.connect(lambda _, id=task[0]: self.show_task_info(id))
+            new_checkbox_priority.clicked.connect(lambda _, id=task[0]: [self.db.pri_task(id), self.read_database()])
+    
+
+    def toggle_task_done(self, task_id):
+        task_info = self.db.task_data(task_id)
+        if task_info:
+            current_state = task_info[0]  # Fetch current state
+            new_state = 0 if current_state else 1
+            self.db.task_done(task_id) if new_state else self.db.task_done(task_id)  # Toggle state
+
+    def delete_task(self, row, task_id):
+        self.db.del_task(task_id)
+        self.read_database()
+
+    def show_task_info(self, task_id):
+        task_info = self.db.task_data(task_id)
+        if task_info:
+            msg_box = QMessageBox()
+            msg_box.setWindowTitle("Task Information")
+            msg_box.setText(f"Description: {task_info[0]}\nTime: {task_info[1]}\nDate: {task_info[2]}")
+            msg_box.exec()
 
 
 if __name__ == "__main__":
