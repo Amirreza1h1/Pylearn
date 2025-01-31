@@ -52,9 +52,11 @@ class MainWindow(QMainWindow):
                 new_push.setStyleSheet("color: red; background-color: white;")
             else:
                 new_push.setStyleSheet("color: white; background-color: #007bff;")
+                
             
             if task[6]:  # Task is done
                 new_checkbox.setChecked(True)
+                new_push.setStyleSheet("text-decoration: line-through; color: black; background-color: white;")
 
             # Add widgets to layout
             self.ui.GL_tasks.addWidget(new_checkbox, i + 1, 0)
@@ -66,15 +68,22 @@ class MainWindow(QMainWindow):
             new_checkbox.clicked.connect(lambda _, id=task[0]: [self.toggle_task_done(id), self.read_database()])
             new_push_delete.clicked.connect(lambda _, row=i + 1, id=task[0]: self.delete_task(row, id))
             new_push.clicked.connect(lambda _, id=task[0]: self.show_task_info(id))
-            new_checkbox_priority.clicked.connect(lambda _, id=task[0]: [self.db.pri_task(id), self.read_database()])
+            new_checkbox_priority.clicked.connect(lambda _, id=task[0]: [self.toggle_task_pri(id), self.read_database()])
     
 
     def toggle_task_done(self, task_id):
-        task_info = self.db.task_data(task_id)
+        task_info = self.db.set_task_data(task_id)
         if task_info:
             current_state = task_info[0]  # Fetch current state
             new_state = 0 if current_state else 1
-            self.db.task_done(task_id) if new_state else self.db.task_done(task_id)  # Toggle state
+            self.db.task_done(task_id,new_state)  # Toggle state
+
+    def toggle_task_pri(self, task_id):
+        task_info = self.db.set_task_data(task_id)
+        if task_info:
+            current_state = task_info[1]  # Fetch current state
+            new_state = 0 if current_state else 1
+            self.db.pri_task(task_id,new_state)  # Toggle state
 
     def delete_task(self, row, task_id):
         self.db.del_task(task_id)
