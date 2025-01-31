@@ -25,17 +25,17 @@ class Database:
         except:
             return False
         
-    def task_done(self,id):
+    def task_done(self,id,new_state):
         # self.cursor.execute(f"UPDATE tasks SET is_done = 1 WHERE id = ?", (id,))
         # self.connection.commit()
         self.cursor.execute(f"SELECT * FROM tasks WHERE id ='{id}'")
         task = self.cursor.fetchone()
         if task !=  None:
-            self.cursor.execute(f"UPDATE tasks SET is_done ='1' WHERE id ='{id}'")
+            self.cursor.execute(f"UPDATE tasks SET is_done ='{new_state}' WHERE id ='{id}'")
             self.connection.commit()
 
-    def pri_task(self,id):
-        self.cursor.execute(f"UPDATE tasks SET priority='1' WHERE id='{id}'")
+    def pri_task(self,id,new_state):
+        self.cursor.execute(f"UPDATE tasks SET priority='{new_state}' WHERE id='{id}'")
         self.connection.commit()
 
     def del_task(self,id):
@@ -49,6 +49,12 @@ class Database:
         self.cursor.execute(f"SELECT description,time,date FROM tasks WHERE id={id}")
         task=self.cursor.fetchone()
         return task
+    
+    def set_task_data(self,id):
+        self.cursor.execute(f"SELECT is_done,priority FROM tasks WHERE id={id}")
+        task=self.cursor.fetchone()
+        return task
+    
 
     def create_tasks_table(self):
         query = """
