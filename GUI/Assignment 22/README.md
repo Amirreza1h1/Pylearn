@@ -16,7 +16,7 @@
 
 <p>it has two layer on itself which one of them is for showing the database information and another one for adding the new work to database.</p>
 
-![pic](assets/ui.jpg)
+![gif](assets/to-do-list.gif)
 
 ##### different method
 
